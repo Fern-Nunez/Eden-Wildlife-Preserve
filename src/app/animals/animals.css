@@ -1,0 +1,171 @@
+.animalHeroContainer {
+    position: relative;
+    width: 100%;
+    height: clamp(12rem, 30vw, 40rem); /* Adjust as needed */
+    overflow: hidden;
+}
+
+.animalHeroImageWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.animalMainContainer{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 clamp(2rem, 7vw, 7rem);
+}
+
+.animalHeroImage {
+    object-fit: cover; /* Ensures image doesn't stretch */
+    max-width: 100%;
+    object-position: center 50%; /* Moves image down */
+}
+
+.animalHeadline{
+    padding-top: clamp(3rem, 7vw, 7rem);
+    padding-bottom: clamp(1rem, 2vw, 2.5rem);
+}
+
+.animalGrid{
+    padding: clamp(2rem, 5vw, 5rem) 0;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    gap: clamp(2rem, 7vw ,3rem);
+}
+.animalGridSet{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: clamp(2rem, 7vw ,3rem);
+}
+.animalCard{
+    width: 100%;
+    position: relative;
+    height: clamp(200px, 40vw, 500px);
+}
+
+.educationImage{
+    object-fit: cover; /* Ensures image doesn't stretch */
+    max-width: 100%;
+}
+.animalImage{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.animalOverlay{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: white;
+    z-index: 2;
+    padding: clamp(1rem, 5vw, 3rem);
+}
+.overlayCard {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    pointer-events: none; /* Ensure the overlay doesn't block interactions */
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition */
+}
+/* Add the gradient using ::before */
+.overlayCard::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), rgba(0,0,0,0.2));
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease-in-out; /* Fade in effect */
+}
+
+/* When hovering over eventCard, show the gradient */
+.animalCard:hover .overlayCard::before {
+    opacity: 1; /* Fully visible gradient */
+}
+
+.animalTitle{
+    font-size: clamp(24px, 4vw, 60px); /* Minimum: 40px, Preferred: 4vw, Maximum: 70px */
+    font-weight: 500; /* Semi-bold */
+    line-height: 1.2;
+}
+
+.lineBreak{
+    border: 1px solid black;
+    opacity: 0.1;
+}
+
+.hippopotamus{
+    object-position: center 20%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (min-width: 960px){
+    .animalGrid{
+        padding: clamp(2rem, 5vw, 5rem) 0;
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        gap: clamp(2rem, 7vw ,3rem);
+    }
+    .animalGridSet{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        gap: clamp(2rem, 7vw ,3rem);
+    }
+    .gridItemOne{
+        grid-row: span 2;
+        height: 100%;
+    }
+    .gridItemTwo{
+        grid-column: span 2;
+    }
+    .gridItemThree{
+        grid-column: span 2;
+    }
+    .gridItemFour{
+        grid-column: span 2;
+    }
+    .gridItemFive{
+        grid-row: span 2;
+        height: 100%;
+    }
+    .gridItemSix{
+        grid-column: span 2;
+    }
+    .masaiGiraffe{
+        object-position: 70%; /* Moves image down */
+    }
+    .africanElephant{
+        object-position: 40%;
+    }
+    .redKangaroo{
+        object-position: 30%;
+    }
+    .tortoise{
+        object-position: 70%;
+    }
+    .meerkat{
+        object-position: 38%;
+    }
+    .komodoDragon{
+        object-position: 55%;
+    }
+
+}

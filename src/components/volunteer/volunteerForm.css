@@ -1,0 +1,125 @@
+.interestSection,
+.availabilitySection,
+.personalSection,
+.experienceSection {
+    padding: 2rem 0;
+}
+
+.sectionDescription {
+    padding: 1rem 0;
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.interestGrid,
+.availabilityGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+@media (min-width: 768px) {
+    .interestGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .availabilityGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.interestCard,
+.availabilityCard {
+    border: 2px solid #AFAFAF;
+    border-radius: 8px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.interestCard:hover,
+.availabilityCard:hover {
+    border-color: #305200;
+    transform: translateY(-2px);
+}
+
+.interestCard.selected,
+.availabilityCard.selected {
+    border-color: #305200;
+    background-color: #305200;
+}
+
+.interestCard.selected p,
+.availabilityCard.selected p {
+    color: white;
+}
+
+.formGroup {
+    display: grid;
+    gap: 1rem;
+}
+
+.formInput {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #305200;
+}
+
+.formTextarea {
+    padding: 1rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #305200;
+    font-family: inherit;
+    resize: vertical;
+}
+
+/* Placeholder styling */
+.formInput::placeholder,
+.formTextarea::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+@media (min-width: 768px) {
+    .formInput::placeholder,
+    .formTextarea::placeholder {
+        font-size: 1.2rem;
+    }
+}
+
+.nameGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.locationGroup {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Section divider */
+.sectionDivider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 1rem 0;
+}
+
+.submitButton {
+    background-color: #305200;
+    font-size: clamp(16px, 5vw, 30px);
+    color: white;
+    font-weight: 300;
+    line-height: 1.6;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-bottom: 5rem;
+}

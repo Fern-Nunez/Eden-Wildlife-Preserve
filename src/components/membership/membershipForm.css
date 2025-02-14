@@ -1,0 +1,162 @@
+.membershipSection {
+    padding: 2rem 0;
+}
+
+.membershipTiersContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+@media (min-width: 768px) {
+    .membershipTiersContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.membershipTier {
+    border: 2px solid #AFAFAF;
+    border-radius: 8px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.membershipTier:hover {
+    border-color: #305200;
+    transform: translateY(-4px);
+}
+
+.selectedTier {
+    border-color: #305200;
+    background-color: rgba(48, 82, 0, 0.05);
+}
+
+.tierHeader {
+    border-bottom: 1px solid #AFAFAF;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tierName {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.tierPrice {
+    font-size: 1.25rem;
+    color: #305200;
+}
+
+.tierBenefits {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.benefitItem {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.contactSection, 
+.paymentSection, 
+.billingSection {
+    padding-bottom: 2rem;
+}
+
+.formInput {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    background-color: transparent;
+    border: 1px solid #305200;
+}
+
+/* Placeholder styling */
+.formInput::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Firefox */
+.formInput::-moz-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Internet Explorer */
+.formInput:-ms-input-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Microsoft Edge */
+.formInput::-ms-input-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .formInput::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .formInput::-moz-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .formInput:-ms-input-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .formInput::-ms-input-placeholder {
+        font-size: 1.2rem;
+    }
+}
+
+/* Section divider */
+.sectionDivider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 1rem 0;
+}
+
+.nameGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.cardDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.totalAmount {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.totalPrice {
+    color: #305200;
+}
+
+.submitButton {
+    background-color: #305200;
+    font-size: clamp(16px, 5vw, 30px);
+    color: white;
+    font-weight: 300;
+    line-height: 1.6;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-bottom: 5rem;
+}

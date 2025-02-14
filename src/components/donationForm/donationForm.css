@@ -1,0 +1,146 @@
+.donationSection {
+    padding: 2rem 0;
+}
+
+.paymentSection {
+    padding-bottom: 2rem;
+}
+
+.billingSection {
+    padding-bottom: 2rem;
+}
+
+.sliderContainer {
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.donationSlider {
+    width: 100%;
+    height: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #AFAFAF;
+    outline: none;
+    border-radius: 4px;
+    position: relative;
+}
+
+/* This creates the colored progress bar effect */
+.donationSlider {
+    background: linear-gradient(to right, #305200 var(--progress), #AFAFAF var(--progress));
+}
+
+.donationSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background: #305200;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.donationSlider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    background: #305200;
+    cursor: pointer;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* For Firefox */
+.donationSlider::-moz-range-progress {
+    background-color: #305200;
+    height: 8px;
+    border-radius: 4px;
+}
+
+.donationDisplay {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #305200;
+}
+
+.formInput {
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    background-color: transparent;
+    border: 1px solid #305200;
+}
+
+/* Placeholder styling */
+.formInput::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Firefox */
+.formInput::-moz-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Internet Explorer */
+.formInput:-ms-input-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Microsoft Edge */
+.formInput::-ms-input-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .formInput::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .formInput::-moz-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .formInput:-ms-input-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .formInput::-ms-input-placeholder {
+        font-size: 1.2rem;
+    }
+}
+
+/* Section divider */
+.sectionDivider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 1rem 0;
+}
+
+.cardDetails {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.submitButton {
+    background-color: #305200;
+    font-size: clamp(16px, 5vw, 30px);
+    color: white;
+    font-weight: 300;
+    line-height: 1.6;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-bottom: 5rem;
+}

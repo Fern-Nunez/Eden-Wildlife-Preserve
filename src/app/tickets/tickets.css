@@ -1,0 +1,32 @@
+.ticketsHeroContainer {
+    position: relative;
+    width: 100%;
+    height: clamp(12rem, 30vw, 40rem); /* Adjust as needed */
+    overflow: hidden;
+}
+
+.ticketsHeroImageWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.ticketsMainContainer{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 clamp(2rem, 7vw, 7rem);
+}
+
+.ticketsHeroImage {
+    object-fit: cover; /* Ensures image doesn't stretch */
+    max-width: 100%;
+    object-position: center 50%; /* Moves image down */
+}
+
+.ticketsHeadline{
+    padding-top: clamp(3rem, 7vw, 7rem);
+    padding-bottom: clamp(1rem, 2vw, 2.5rem);
+}
+.datePickerContainer{
+    padding: clamp(2rem, 5vw, 5rem) 0;
+}

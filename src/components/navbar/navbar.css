@@ -1,0 +1,262 @@
+
+.navbarLinksLeft{
+    display: none;
+}
+.navbarLinksRight{
+    display: none;
+}
+.navbar{
+    background-color: #1C1C19;
+    height: 60px;
+    z-index: 20;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.navbarLogo{
+    z-index: 11;
+    margin-left: 1rem;
+}
+
+.hamburgerMenuContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-right: 1rem;
+    z-index: 20;
+    border-radius: 50px;
+}
+.navbarMobileMenu{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: #305200;
+}
+
+
+.hamburger {
+    width: 24px;
+    height: 10px;     /* Reduced height */
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animation for first line */
+.hamburger.active .line1 {
+    transform: translate(0, 4px) rotate(45deg);  /* Changed from 8px to 4px */
+}
+
+/* Animation for second line */
+.hamburger.active .line2 {
+    transform: translate(0, -4px) rotate(-45deg);  /* Changed from -9px to -4px */
+}
+
+.navbarMobileLinks{
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    color: white;
+    gap: 3rem;
+    font-size: 45px;
+    font-weight: 450;
+    justify-content: center;
+    padding: 4rem 0;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.navbarMobileLinks a {
+    position: relative;
+    text-decoration: none; /* Remove default underline */
+    color: white;
+    display: inline-block; /* Ensure the underline matches the word width */
+}
+
+.navbarMobileLinks a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust spacing between text and underline */
+    left: 0; /* Start directly under the first letter */
+    width: 85%; /* Set the width relative to each word */
+    height: 3px; /* Thickness of the underline */
+    background-color: white; /* Match the text color */
+    animation: barSlide 1s ease;
+}
+
+.navbarMobileSocials{
+    position: fixed;
+    display: flex;
+    gap: 1rem;
+    bottom: 0;
+    left: 50%; /* Horizontally align to the center */
+    transform: translateX(-50%); /* Offset by half its width */
+    padding-bottom: 2rem;
+    animation: fadeInSocials 0.5s ease;
+}
+
+.link{
+    display: inline-block; /* Makes the div only as wide as its content */
+    width: max-content; /* Ensures the width is based on the content inside */
+}
+
+.leafs {
+    position: absolute;
+    width: 100%; /* Ensure it spans the full width */
+    height: 100%; /* Optional: Ensures it covers the full screen */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0.2;
+}
+
+.leaf1 {
+    position: absolute; /* Ensures it moves inside .leafs */
+    top: -70;
+    right: 0;
+    animation: leaf1R 2s ease;
+}
+.leaf2 {
+    position: absolute; /* Ensures it moves inside .leafs */
+    top: 20%;
+    left: -50;
+    transform: rotate(180deg);
+    animation: leaf2R 2s ease;
+}
+.leaf3 {
+    position: absolute; /* Ensures it moves inside .leafs */
+    bottom: 25%;
+    right: -30;
+    animation: leaf3R 2s ease;
+}
+.leaf4 {
+    position: absolute; /* Ensures it moves inside .leafs */
+    bottom: 40;
+    left: -30;
+    transform: rotate(200deg);
+    animation: leaf4R 2s ease;
+}
+@media (min-width: 960px){
+    .navbar{
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        color: white;
+        height: 75px;
+        align-items: center;
+        justify-content: center;
+        z-index: 10;
+    }
+    .navbarLinksLeft{
+        display: flex;
+        gap: clamp(3rem, 7vw, 5rem);
+        justify-content: flex-start;
+        padding: 0 3rem;
+        padding-bottom: 2.5rem;
+    }
+    
+    .navbarLinksRight{
+        display: flex;
+        gap: clamp(2rem, 7vw, 4rem);
+        justify-content: flex-end;
+        padding: 0 3rem;
+        padding-bottom: 2.5rem;
+        font-weight: 500;
+        font-size: 15px;
+    }
+    
+    .navbarCenter{
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+    
+    .navbarLogo{
+        z-index: 11;
+        justify-self: center;
+        align-self: center;
+        margin: 0 auto;
+    }
+    .hamburgerMenuContainer{
+        display: none;
+    }
+}
+
+@media (min-width: 1080px){
+    .navbarLogo{
+        height: 110px;
+        width: 110px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes barSlide {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 85%;
+    }
+}
+
+@keyframes fadeInSocials {
+    from {
+        opacity: 0;
+        transform: translateX(-50%) translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+@keyframes leaf1R {
+    from{
+        transform: rotate(30deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes leaf2R {
+    from{
+        transform: rotate(210deg);
+    }
+    to {
+        transform: rotate(180deg);
+    }
+}
+@keyframes leaf3R {
+    from{
+        transform: rotate(-20deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+@keyframes leaf4R {
+    from{
+        transform: rotate(170deg);
+    }
+    to {
+        transform: rotate(200deg);
+    }
+}

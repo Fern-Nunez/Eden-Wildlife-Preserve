@@ -1,0 +1,30 @@
+.legalHeroContainer {
+    position: relative;
+    width: 100%;
+    height: clamp(12rem, 30vw, 40rem); /* Adjust as needed */
+    overflow: hidden;
+}
+
+.legalHeroImageWrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.legalMainContainer{
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 clamp(2rem, 7vw, 7rem);
+    height: 80vh;
+}
+
+.legalHeroImage {
+    object-fit: cover; /* Ensures image doesn't stretch */
+    max-width: 100%;
+    object-position: center 50%; /* Moves image down */
+}
+
+.legalHeadline{
+    padding-top: clamp(3rem, 7vw, 7rem);
+    padding-bottom: clamp(1rem, 2vw, 2.5rem);
+}

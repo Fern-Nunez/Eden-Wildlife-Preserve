@@ -1,0 +1,90 @@
+/* components/Search/search.css */
+.searchContainer {
+    position: relative;
+    display: inline-block;
+}
+
+.searchButton {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.searchDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;  /* Changed from right to left */
+    background-color: var(--background);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    margin-top: 0.5rem;
+    width: 300px;  /* Adjusted width */
+}
+
+.searchInputWrapper {
+    position: relative;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.searchInput {
+    width: 100%;
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    border: 1px solid #305200;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: transparent;
+    color: #000000;
+}
+
+.searchInput::placeholder {
+    color: #666666;
+}
+
+.closeButton {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #305200;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.closeButton:hover {
+    opacity: 0.7;
+}
+
+.searchResults {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-top: 0.5rem;
+}
+
+.searchResult {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.searchResult:hover {
+    background-color: rgba(48, 82, 0, 0.1);
+}
+
+.searchResult p {
+    margin: 0;
+    color: #000000;
+}
+
+.noResults p {
+    margin: 0;
+    padding: 0.75rem 1rem;
+    color: #000000;
+}

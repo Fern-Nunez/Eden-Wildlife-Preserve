@@ -1,0 +1,154 @@
+.ticketTypeSection{
+    padding: 2rem 0;
+}
+.contactSection{
+    padding-bottom: 2rem;
+}
+.paymentSection{
+    padding-bottom: 2rem;
+}
+.billingSection{
+    padding-bottom: 2rem;
+}
+.datePickerSection{
+    padding-top: 2rem;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 1rem;
+}
+.certainTicketContainer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+.ticketInput{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px solid #305200;
+}
+
+/* Placeholder styling */
+.ticketInput::placeholder,
+.formInput::placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Firefox */
+.ticketInput::-moz-placeholder,
+.formInput::-moz-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Internet Explorer */
+.ticketInput:-ms-input-placeholder,
+.formInput:-ms-input-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* For Microsoft Edge */
+.ticketInput::-ms-input-placeholder,
+.formInput::-ms-input-placeholder {
+    color: black;
+    opacity: 0.5;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .ticketInput::placeholder,
+    .formInput::placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .ticketInput::-moz-placeholder,
+    .formInput::-moz-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .ticketInput:-ms-input-placeholder,
+    .formInput:-ms-input-placeholder {
+        font-size: 1.2rem;
+    }
+    
+    .ticketInput::-ms-input-placeholder,
+    .formInput::-ms-input-placeholder {
+        font-size: 1.2rem;
+    }
+}
+
+/* Styling number input arrows */
+.ticketInput::-webkit-inner-spin-button,
+.ticketInput::-webkit-outer-spin-button {
+    opacity: 1;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: #305200;
+}
+
+.formInput{
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 5px;
+    margin: 0.5rem 0;
+    background-color: transparent;
+    border: 1px solid #305200;
+}
+
+/* Section divider */
+.sectionDivider {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 1rem 0;
+}
+
+/* Name group for desktop */
+.nameGroup {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+/* Style for number input container */
+.ticketInput {
+    position: relative;
+    appearance: none;
+    -moz-appearance: textfield;
+}
+
+.ticketInput::-webkit-inner-spin-button {
+    background-color: #305200;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Remove margin from p tags in certain containers */
+.certainTicketContainer p,
+.totalAmount p,
+.submitSection button p {
+    margin: 0;
+}
+.totalAmount{
+    display: flex;
+    justify-content: space-between;
+}
+.submitButton{
+    background-color: #305200;
+    font-size: clamp(16px, 5vw, 30px);
+    color: white;
+    font-weight: 300;
+    line-height: 1.6;
+    width: 100%;
+    padding: 1rem 0;
+    margin: 1rem 0;
+    margin-bottom: 5rem;
+}

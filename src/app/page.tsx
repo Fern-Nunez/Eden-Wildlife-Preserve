@@ -1,101 +1,328 @@
 import Image from "next/image";
+import Navbar from "../components/navbar/navbar";
+import Footer from "../components/footer/footer";
+import ImageCarousel from "../components/heroImageChange/heroImageChange";
+import "./home.css";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* Navbar */}
+      <Navbar/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="heroSection">
+        <ImageCarousel />
+      </div>
+
+      <div className="mainContainer">
+      <div className="mainContent">
+        {/* Content Section */}
+        <div className="contentSection">
+          <div>
+            <h1> Connect, Learn, Protect </h1>
+          </div>
+          <div className="contentGrid">
+            
+              <div className="contentCard hikingTrails">
+                <a href="/events">
+                <Image
+                  src="/images/hikingTrails.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className="overlayContent"></div>
+                <div className="contentCardText">
+                  <p className="contentCopy"> Hiking Trails</p>
+                </div>
+                </a>
+              </div>
+            
+
+            
+              <div className="contentCard">
+                <a href="/events">
+                <Image
+                  src="/images/zooSafari.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className="overlayContent"></div>
+                <div className="contentCardText">
+                  <p className="contentCopy"> Safari Ride</p>
+                </div>
+                </a>
+              </div>
+            
+
+            
+              <div className="contentCard giraffeFeeding">
+                <a href="/events">
+                <Image
+                  src="/images/giraffeFeedingCarrot.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className="overlayContent"></div>
+                <div className="contentCardText">
+                  <p className="contentCopy"> Giraffe Feeding</p>
+                </div>
+                </a>
+              </div>
+            
+
+            
+              <div className="contentCard">
+                <a href="/events">
+                <Image
+                  src="/images/zooTours.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                <div className="overlayContent"></div>
+                <div className="contentCardText">
+                  <p className="contentCopy"> Tours</p>
+                </div>
+                </a>
+              </div>
+            
+
+            <div className="contentCard aviaryOasis">
+              <a href="/events">
+              <Image
+                src="/images/aa.jpg"
+                alt="Eden Wildlife Preserve"
+                layout="fill"
+                objectFit="cover"
+              />
+              <div className="overlayContent"></div>
+              <div className="contentCardText">
+                <p className="contentCopy"> Aviary Oasis</p>
+              </div>
+              </a>
+            </div>
+
+
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      </div>
+
+      {/* Information Section */}
+      <div className="informationSection">
+        <div className="informationHeader">
+            <h1 className="informationHeaderText"> Building a Better Future</h1>
+          </div>
+      <div className="informationContent">
+
+        
+          <div className="informationGrid">
+            <div className="informationCard">
+              <Image
+                src="/icons/globe-europe-africa.svg"
+                alt="Eden Wildlife Preserve"
+                width={95}
+                height={95}
+              />
+              <h2 className="infoSectionCopy"> Conservation Efforts </h2>
+              <p className="infoSectionCopy">Protecting endangered species and restoring habitats for a better world</p>
+              <a href="/conservation">
+                <button className="informationButton"> Learn More </button>
+              </a>
+            </div>
+
+            <div className="informationCard"> 
+              <Image
+                  src="/icons/presentation.svg"
+                  alt="Eden Wildlife Preserve"
+                  width={90}
+                  height={90}
+                />
+              <h2 className="infoSectionCopy"> Immersive Exhibits </h2>
+              <p className="infoSectionCopy">Get close with animals in habitats designed to educate and inspire</p>
+              <a href="/exhibits"> <button className="informationButton"> Learn More </button> </a>
+            </div>
+
+            <div className="informationCard"> 
+                <Image
+                  src="/icons/academic-cap.svg"
+                  alt="Eden Wildlife Preserve"
+                  width={100}
+                  height={100}
+                />
+              <h2 className="infoSectionCopy"> Educational Programs </h2>
+              <p className="infoSectionCopy">Inspiring curiosity with workshops, tours, and hands-on learning</p>
+              <a href="education">
+                <button className="informationButton"> Learn More </button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+
+    <div className="mainContainer">
+      {/* Featured Animals */}
+      <div className="featuredAnimalsSection">
+          <h1 className="featuredAnimalsHeader"> Our Beloved Residents </h1>
+          <div className="featuredAnimalsGrid">
+
+            <div className="animalCard">
+              <div className="animalImageContainer">
+                <Image
+                  src="/images/mountainGorilla.jpg"
+                  alt="Eden Wildlife Preserve"
+                  width={1080}
+                  height={720}
+                  className="animalImage"
+                />
+              </div>
+              <div className="animalNameContainer">
+                <h2 className="animalName">Mountain Gorilla</h2>
+                <h2 className="personalAnimalName"> Koko </h2>
+              </div>
+            </div>
+
+            <div className="animalCard">
+              <div className="animalImageContainer">
+                <Image
+                  src="/images/africanElephants.jpg"
+                  alt="Eden Wildlife Preserve"
+                  width={500}
+                  height={500}
+                  className="animalImage"
+                />
+              </div>
+              <div className="animalNameContainer">
+                <h2 className="animalName">African Elephant</h2>
+                <h2 className="personalAnimalName"> Ellie </h2>
+              </div>
+            </div>
+            
+            <div className="animalCard">
+              <div className="animalImageContainer">
+                <Image
+                  src="/images/bengalTiger.jpg"
+                  alt="Eden Wildlife Preserve"
+                  width={500}
+                  height={500}
+                  className="animalImage"
+                />
+              </div>
+              <div className="animalNameContainer">
+                <h2 className="animalName">Bengal Tiger</h2>
+                <h2 className="personalAnimalName"> Rajah </h2>
+              </div>
+            </div>
+
+            <div className="animalCard">
+              <div className="animalImageContainer">
+                <Image
+                  src="/images/masaiGiraffe.jpg"
+                  alt="Eden Wildlife Preserve"
+                  width={500}
+                  height={500}
+                  className="animalImage"
+                />
+              </div>
+              <div className="animalNameContainer">
+                <h2 className="animalName">Masai Giraffe</h2>
+                <h2 className="personalAnimalName"> Daisy </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+          {/* CTA Section */}
+          <div className="ctaSection">
+            <h1> Join the Cause Today </h1>
+            <div className="ctaCard">
+              <div className="ctaImage">
+                <Image
+                  src="/images/conservationImage.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+                <h2> Support Conservation Efforts </h2>
+                <div className="ctaTextContainer">
+                <p> Your donation helps provide world-class care for our animals, protect endangered species, and fund critical conservation programs around the globe. </p>
+                </div>
+                <a href="/donate">
+                  <button className="ctaButton"> Donate </button>
+                </a>
+            </div>
+
+            <div className="ctaCard">
+              <div className="ctaImage">
+                <Image
+                  src="/images/feedingPenguins.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+                <h2> Join Our Zoo Family </h2>
+                <div className="ctaTextContainer">
+                <p> Become a member and enjoy exclusive perks like unlimited visits, discounts, and members-only events, while helping us protect wildlife and inspire the next generation. </p>
+                </div>
+                <a href="membership">
+                  <button className="ctaButton"> Membership </button>
+                </a>
+            </div>
+
+            <div className="ctaCard">
+              <div className="ctaImage">
+                <Image
+                  src="/images/handOnImpact.jpg"
+                  alt="Eden Wildlife Preserve"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+                <div>
+                  <h2> Make a Hands-On Impact </h2>
+                </div>
+                <div className="ctaTextContainer">
+                  <p> Join our team of dedicated volunteers and play a vital role in caring for animals, educating visitors, supporting conservation efforts, and making a lasting impact on the future of wildlife. </p>
+                </div>
+                <div>
+                  <a href="volunteer">
+                    <button className="ctaButton"> Volunteer </button>
+                  </a>
+                </div>
+            </div>
+          </div>
+
     </div>
+    {/* Newsletter Section */}
+    <div className="newsletterSection">
+      <div className="newsletterContent">
+        <div className="newsletterImageContainer">
+          <Image
+            src="/icons/emailIcon.svg"
+            alt="Eden Wildlife Preserve"
+            width={130}
+            height={91}
+            className="emailIcon"
+          />
+        </div>
+        <div>
+          <div className="newsletterHeader"> Join Our Newsletter and Stay Wildly Informed! </div>
+        </div>
+        <div>
+          <form className="newsletterForm">
+            <input type="email" placeholder="Your Email Address" className="newsletterInput"/>
+            <button type="submit" className="newletterButton"> Subscribe </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <Footer/>
+    </>
   );
 }

@@ -122,27 +122,27 @@
 
 .leaf1 {
     position: absolute; /* Ensures it moves inside .leafs */
-    top: -70;
+    top: -70px;
     right: 0;
     animation: leaf1R 2s ease;
 }
 .leaf2 {
     position: absolute; /* Ensures it moves inside .leafs */
     top: 20%;
-    left: -50;
+    left: -50px;
     transform: rotate(180deg);
     animation: leaf2R 2s ease;
 }
 .leaf3 {
     position: absolute; /* Ensures it moves inside .leafs */
     bottom: 25%;
-    right: -30;
+    right: -30px;
     animation: leaf3R 2s ease;
 }
 .leaf4 {
     position: absolute; /* Ensures it moves inside .leafs */
-    bottom: 40;
-    left: -30;
+    bottom: 40px;
+    left: -30px;
     transform: rotate(200deg);
     animation: leaf4R 2s ease;
 }

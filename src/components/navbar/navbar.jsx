@@ -46,7 +46,7 @@ function Navbar() {
                 <nav className="navbarMobileMenu">
                     <div className='leafs'>
                         <Image
-                            src={"/images/jungleLEaves.png"}
+                            src={"/images/jungleLeaves.png"}
                             width={150}
                             height={150}
                             alt='leaves'
@@ -54,7 +54,7 @@ function Navbar() {
                             loading='eager'
                         />
                         <Image
-                            src={"/images/jungleLEaves.png"}
+                            src={"/images/jungleLeaves.png"}
                             width={150}
                             height={150}
                             alt='leaves'
@@ -62,7 +62,7 @@ function Navbar() {
                             loading='eager'
                         />
                         <Image
-                            src={"/images/jungleLEaves.png"}
+                            src={"/images/jungleLeaves.png"}
                             width={150}
                             height={150}
                             alt='leaves'
@@ -70,7 +70,7 @@ function Navbar() {
                             loading='eager'
                         />
                         <Image
-                            src={"/images/jungleLEaves.png"}
+                            src={"/images/jungleLeaves.png"}
                             width={150}
                             height={150}
                             alt='leaves'

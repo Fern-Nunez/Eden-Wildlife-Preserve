@@ -29,7 +29,7 @@ export default function Conservation() {
           <h1> Wildlife Threats: A Growing Challenge </h1>
         </div>
         <div className="conservationSubline">
-          <p> Our planet's diverse wildlife faces growing threats from human activity and environmental changes. Recognizing these challenges is the first step toward protecting them. Here are the key dangers they encounter: </p>
+          <p> Our planet&apos;s diverse wildlife faces growing threats from human activity and environmental changes. Recognizing these challenges is the first step toward protecting them. Here are the key dangers they encounter: </p>
         </div>
 
 
@@ -49,7 +49,7 @@ export default function Conservation() {
                 <h2> Deforestation </h2>
               </div>
               <div>
-                <p> Forests, critical ecosystems supporting countless species, are rapidly disappearing due to logging, agriculture, and urban expansion. This loss deprives wildlife of shelter and food, disrupts ecosystems, and accelerates climate change, threatening the planet's delicate balance.</p>
+                <p> Forests, critical ecosystems supporting countless species, are rapidly disappearing due to logging, agriculture, and urban expansion. This loss deprives wildlife of shelter and food, disrupts ecosystems, and accelerates climate change, threatening the planet&apos;s delicate balance.</p>
               </div>
             </div>
           </div>

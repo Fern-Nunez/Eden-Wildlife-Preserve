@@ -20,7 +20,7 @@ export default function Animals() {
       </div>
       <div className="animalMainContainer">
         <div className="animalHeadline">
-          <h1> Meet Eden's Animals </h1>
+          <h1> Meet Eden&apos;s Animals </h1>
         </div>
         <div className="animalSubline">
           <p> Discover the amazing animals of Eden Wildlife Preserve, from majestic rhinos to playful penguins </p>

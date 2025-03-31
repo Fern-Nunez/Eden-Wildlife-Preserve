@@ -8,10 +8,10 @@ const ImageCarousel = () => {
   const [imagesLoaded, setImagesLoaded] = useState(false);
 
   const images = [
-    { id: 1, src: "/images/cheetahHero.jpg", alt: "Eden Wildlife Preserve" },
-    { id: 2, src: "/images/bengalHero.jpg", alt: "Eden Wildlife Preserve" },
-    { id: 3, src: "/images/polarBearHero.jpg", alt: "Eden Wildlife Preserve" },
-    { id: 4, src: "/images/birdsHero.jpg", alt: "Eden Wildlife Preserve" },
+    { id: 1, src: "/images/giraffeHero.jpg", alt: "Eden Wildlife Preserve" },
+    { id: 2, src: "/images/bengalTigerHero.jpg", alt: "Eden Wildlife Preserve" },
+    { id: 3, src: "/images/polarBearHeroTwo.jpg", alt: "Eden Wildlife Preserve" },
+    { id: 4, src: "/images/macaw.jpg", alt: "Eden Wildlife Preserve" },
   ];
 
   // Preload images
